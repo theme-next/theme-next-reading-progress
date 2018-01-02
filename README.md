@@ -17,8 +17,7 @@ bower.json  _config.yml  docs  gulpfile.coffee  languages  layout  LICENSE.md  p
 Install module to `source/lib` directory:
 
 ```sh
-$ git clone https://github.com/theme-next/theme-next-reading-progress
- source/lib/pace
+$ git clone https://github.com/theme-next/theme-next-reading-progress source/lib/reading_progress
 ```
 
 <h2 align="center">Step 3 &rarr; Set it up</h2>
