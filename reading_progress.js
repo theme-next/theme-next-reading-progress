@@ -1,4 +1,5 @@
 (function () {
+	if(!$('.reading-progress-bar').length)return //no progress bar found
 	var supportsPassive = false
 	try {
 		var opts = Object.defineProperty({}, 'passive', {
