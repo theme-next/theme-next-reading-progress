@@ -7,17 +7,21 @@
         supportsPassive = true
       }
     })
-    window.addEventListener("test", null, opts)
+    window.addEventListener('test', $.noop, opts)
+    window.removeEventListener('test', $.noop)
   } catch (e) { }
 
   $(document).ready(function () {
+    var $bar = $('.reading-progress-bar')
     window.addEventListener('scroll', function () {
+      var $win = $(window)
       var $post = $('.post-block')
-      var h = $(window).scrollTop() - $post.position().top
+      var winmid = $win.scrollTop() + $win.height() / 2 //assume reader will focus on middle of screen(vertical)
+      var h = winmid - $post.position().top
       var percent = Math.round(h / $post.height() * 100)
       if (percent < 0) percent = 0
       if (percent > 100) percent = 100
-      $('.reading-progress-bar').css('width', percent + '%')
+      $bar.css('width', percent + '%')
     }, supportsPassive ? { passive: true } : false)
   })
 })()
