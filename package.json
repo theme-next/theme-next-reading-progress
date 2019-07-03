@@ -1,6 +1,6 @@
 {
   "name": "theme-next-reading-progress",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "<h1 align=\"center\">Reading Progress for <a href=\"https://github.com/theme-next\">NexT</a></h1>",
   "main": "reading_progress.js",
   "scripts": {
